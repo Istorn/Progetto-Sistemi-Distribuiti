@@ -5,6 +5,7 @@ public class GestorePartite {
 	private List<Partita> partite;
 	
 	public GestorePartite(){
+		
 		this.partite=new ArrayList<Partita>();
 	}
 	//Restituisce l'indice della partita cercata in base al nome nella lista delle partite attive
