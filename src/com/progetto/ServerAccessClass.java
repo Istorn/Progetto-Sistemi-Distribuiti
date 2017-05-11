@@ -1,16 +1,18 @@
-package com.server.rest;
+package com.progetto;
+import java.util.*;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 @ApplicationPath("/*")
 @Path("/servergame")
 public class ServerAccessClass {
-	public static GestorePartite gestore=new GestorePartite();
+	GestorePartite gestore=new GestorePartite();
 	
 	//GET: elencho partite, elenco giocatori annessi alle partite
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.TEXT_HTML)
 	public String ottieniPartite(){
+		
 		return gestore.listaPartite();
 	}
 	//Post crearea partita
