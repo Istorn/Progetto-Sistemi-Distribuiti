@@ -27,7 +27,7 @@ public class Giocatore {
 	        Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
 	        while (interfaces.hasMoreElements()) {
 	            NetworkInterface iface = interfaces.nextElement();
-	            // filters out 127.0.0.1 and inactive interfaces
+	            // Eliminiamo l'indirizzo di loopback e il localhost
 	            if (iface.isLoopback() || !iface.isUp())
 	                continue;
 
